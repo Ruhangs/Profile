@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: rgb(30, 32, 31);
+      text-align: center;
+      color: aliceblue;
+    }
+    .center {
+      position: absolute;
+      width: 1000px;
+      height: 50px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+    .center ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .center ul li{
+      list-style: none;
+      font-size: 2rem;
+      opacity: 0;
+      animation: slideTop 0.8s  ease forwards;
+      animation-delay: calc(0.1s * var(--i));
+    }
+
+    .center a {
+      display: inline-block;
+      text-decoration: none;
+      width: 16rem;
+      height: 3rem;
+      margin-top: 2rem;
+      background-color: #e2dc37;
+      border-radius: 6px;
+      font-size: 1.5rem;
+      line-height: 3rem;
+      color: aliceblue;
+      opacity: 0;
+      animation: dance 2s ease forwards;
+      animation-delay: 1s;
+    }
+
+    /* 边框闪烁动画 模拟指针闪烁 */	
+    @keyframes slideTop {
+        from {transform: translateY(-10rem);}
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+    }
+    @keyframes dance {
+        from {scale: 0;}
+        to { opacity: 1; scale: 100%;} 
+    }
+
+    @keyframes identifier {
+      
+    }
+
+  </style>
+</head>
+<body>
+  <div class="center">
+    <ul>
+      <li style="--i: 1">非</li>
+      <li style="--i: 2">常</li>
+      <li style="--i: 3">抱</li>
+      <li style="--i: 4">歉</li>
+      <li style="--i: 5">，</li>
+      <li style="--i: 6">个</li>
+      <li style="--i: 7">人</li>
+      <li style="--i: 8">简</li>
+      <li style="--i: 9">历</li>
+      <li style="--i: 10">网</li>
+      <li style="--i: 11">站</li>
+      <li style="--i: 12">地</li>
+      <li style="--i: 13">址</li>
+      <li style="--i: 14">更</li>
+      <li style="--i: 15">新</li>
+      <li style="--i: 16">，</li>
+      <li style="--i: 17">点</li>
+      <li style="--i: 18">击</li>
+      <li style="--i: 19">下</li>
+      <li style="--i: 20">方</li>
+      <li style="--i: 21">按</li>
+      <li style="--i: 22">钮</li>
+      <li style="--i: 23">跳</li>
+      <li style="--i: 24">转</li>
+      <li style="--i: 25">~</li>
+    </ul>
+    <a href="https://ruhangs.github.io/">阮杭生的个人简历网站</a>
+  </div>
+  
+</body>
+</html>
